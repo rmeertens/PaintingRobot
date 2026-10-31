@@ -1,0 +1,6 @@
+.secrets.env
+*.env
+gcode/snapshots/
+.DS_Store
+__pycache__/
+*.pyc

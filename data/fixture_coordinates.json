@@ -1,0 +1,150 @@
+{
+  "layout": "v2b: landscape A5 card at the back, 5 jars along the front, base 235 x 220, clips only beside the card",
+  "module_top_z": 6.0,
+  "card_area": {
+    "x0": 12.5,
+    "y0": 58.9,
+    "x1": 222.5,
+    "y1": 206.9,
+    "surface_z": 5.0
+  },
+  "paint_window": {
+    "x0": 16.5,
+    "y0": 62.9,
+    "x1": 218.5,
+    "y1": 202.9,
+    "frame_top_z": 9.0
+  },
+  "jars": [
+    {
+      "id": "J1",
+      "cx": 32.5,
+      "cy": 26.25,
+      "floor_z": 6.0,
+      "rim_z": 52.13
+    },
+    {
+      "id": "J2",
+      "cx": 75.0,
+      "cy": 26.25,
+      "floor_z": 6.0,
+      "rim_z": 52.13
+    },
+    {
+      "id": "J3",
+      "cx": 117.5,
+      "cy": 26.25,
+      "floor_z": 6.0,
+      "rim_z": 52.13
+    },
+    {
+      "id": "J4",
+      "cx": 160.0,
+      "cy": 26.25,
+      "floor_z": 6.0,
+      "rim_z": 52.13
+    },
+    {
+      "id": "J5",
+      "cx": 202.5,
+      "cy": 26.25,
+      "floor_z": 6.0,
+      "rim_z": 52.13
+    }
+  ],
+  "jar_height": 46.13,
+  "safe_travel_tip_z": 57.1,
+  "min_tool_stickout_below_holder": 45,
+  "_note": "mm; origin = front-left corner of the 235 x 220 base plate, X right, Y to the back of the printer, Z up from the glass. Brush axis = old nozzle X, ~18 mm further forward than the old nozzle; calibrate before use.",
+  "paint_module_area": {
+    "x0": 3.0,
+    "y0": 2.5,
+    "x1": 232.0,
+    "y1": 50.0
+  },
+  "pen_cartridge": {
+    "tilt_deg": 30,
+    "tilt_plane": "X-Z, sideways along the gantry, parallel to the carriage plate (top leans +X, tip points -X)",
+    "tip_y_offset_from_brush_mm": 0.0,
+    "tip_x_holder_formula": "x = 6 - (20 - z_tip) * tan(30 deg); holder frame: x from old nozzle x, z from carriage plate bottom edge",
+    "tip_x_offset_from_brush_mm_at_tip_20mm_below_plate": -17.1,
+    "note": "negative = to the left (-X). Calibrate on the machine."
+  },
+  "spring_pen_cartridge": {
+    "type": "swing arm, tiny spring",
+    "tilt_deg": 30,
+    "tilt_plane": "X-Z, sideways along the gantry (top leans +X)",
+    "tip_offset_from_brush_mm_at_tip_20mm_below_plate": {
+      "x": 0.0,
+      "y": 0.0
+    },
+    "tip_x_per_mm_extra_stickout": -0.58,
+    "pen_lift_before_tab_mm": 8,
+    "spring_motion_ratio": 0.32,
+    "note": "Lower Z 2-3 mm past touching so the spring sets the pressure. Calibrate on the machine."
+  },
+  "palette_module": {
+    "note": "Alternative to the jar paint module: same recess, same 3 magnets. Sticker 205 x 43.5 mm at x 15-220, y 4.5-48.",
+    "frame_top_z": 10.0,
+    "paint_surface_z": 5.7,
+    "cells": [
+      {
+        "id": 1,
+        "x": 32.5,
+        "y": 19.5,
+        "w": 31.0,
+        "h": 25.0
+      },
+      {
+        "id": 2,
+        "x": 66.5,
+        "y": 19.5,
+        "w": 31.0,
+        "h": 25.0
+      },
+      {
+        "id": 3,
+        "x": 100.5,
+        "y": 19.5,
+        "w": 31.0,
+        "h": 25.0
+      },
+      {
+        "id": 4,
+        "x": 134.5,
+        "y": 19.5,
+        "w": 31.0,
+        "h": 25.0
+      },
+      {
+        "id": 5,
+        "x": 168.5,
+        "y": 19.5,
+        "w": 31.0,
+        "h": 25.0
+      },
+      {
+        "id": 6,
+        "x": 202.5,
+        "y": 19.5,
+        "w": 31.0,
+        "h": 25.0
+      }
+    ],
+    "wipe_bar": {
+      "y": 35.0,
+      "x0": 17.0,
+      "x1": 218.0,
+      "top_z": 13.4,
+      "diameter": 4.0
+    },
+    "discard_lane": {
+      "x0": 17.0,
+      "x1": 218.0,
+      "y0": 38.0,
+      "y1": 46.0,
+      "surface_z": 5.7
+    },
+    "safe_travel_tip_z_with_palette": 16.5
+  }
+}

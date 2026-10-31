@@ -1,0 +1,12 @@
+{
+  "_note": "Measured brush position. printer = fixture + offset. Written by Claude on 31 Oct 2026 from Roland jogging the brush to the back-left calibration point.",
+  "measured": [
+    {
+      "name": "back left",
+      "fixture": {"x": 19.5, "y": 199.9, "z": 5.0},
+      "printer": {"x": 5.0, "y": 207.0, "z": 6.1},
+      "note": "paint window back-left corner, 3 mm inset; brush tip just touching the paper; M114 after G28"
+    }
+  ],
+  "offset": {"x": -14.5, "y": 7.1, "z": 1.1}
+}
