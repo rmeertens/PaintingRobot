@@ -81,9 +81,9 @@ if pushed. So:
 ### Brush stroke profile (current values in `tree_brush.py`)
 | Setting | Value | Meaning |
 |---|---|---|
-| `PRESS` | 1.5 mm | start of stroke: tip commanded this far **below** the paper (full weight) |
+| `PRESS` | 1.0 mm | start of stroke: tip commanded this far **below** the paper (full weight) |
 | `HOLD_MM` | 12 mm | first part of the stroke stays at full pressure |
-| `LIFT` | 8 mm | max tip height **above** the paper (smooth S-curve lift) |
+| `LIFT` | 7 mm | max tip height **above** the paper (smooth S-curve lift) |
 | `ATTACK_MM` | 45 mm | length of the lift (slow attack); shorter strokes get the profile shrunk to fit |
 | `HOVER` | 19 mm | between strokes; must be above `LIFT` |
 | `APPROACH` | 20 mm | first move after homing |
@@ -92,7 +92,7 @@ if pushed. So:
 How we got there: started at −1.5 → +0.6; "don't go that far down" → −0.5; lighter → 0 / +1;
 then back to −1.5 at the start with an ever higher finish: +3, +6, +11, **+16 mm**.
 Then `calib_strokes.gcode` (15 strokes: max height 3/6/9/12/16 mm × attack 10/25/45 mm): Roland
-liked **line 9 (9 mm, 45 mm attack)** best, and the tree now uses it with the max height lowered to 8 mm (old version: `tree_brush_lift16.py`). The brush
+liked **line 9 (9 mm, 45 mm attack)** best, and the tree now uses it with the max height lowered to 7 mm and only 1 mm pressed (old version: `tree_brush_lift16.py`). The brush
 leaves the paper well before the end of the move; the tail of the stroke is the lift-off.
 
 ### Composition rules Roland asked for
@@ -106,7 +106,7 @@ leaves the paper well before the end of the move; the tail of the stroke is the 
   with ±30 % random variation per stroke and ±3° angle jitter.
 - Stroke spacing about one brush width (`PITCH` 3.5 mm).
 - Tree shape that worked: one triangle (not three tiers), 176 × 126 mm, lying along the card,
-  tip to the right, base **dented in by 14 mm**, shifted **12 mm right** (`SHIFT_X`).
+  tip to the right, base **dented in by 20 mm**, shifted **12 mm right** (`SHIFT_X`).
   When we tried three tiers, the steps between tiers had to be **deep** (≈25 / 15 mm) to read.
 
 ### Paint

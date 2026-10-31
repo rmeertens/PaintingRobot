@@ -29,7 +29,7 @@ WIDTH = 126.0        # widest point, across the card
 # branch is deep and the three layers read clearly.
 TIERS = [(0.00, 1.00, 1.00, 0.00)]   # one tier: a single triangle from the base to the tip
 SHIFT_X = 12.0       # move the whole tree right (+) or left (-) on the card
-DENT = 14.0          # the base curves in towards the tip by this much in the middle (0 = straight)
+DENT = 20.0          # the base curves in towards the tip by this much in the middle (0 = straight)
 # ---------------- BRUSH ----------------
 PITCH = 3.5          # spacing between strokes along the tree (about one brush width)
 CENTRE_OVERLAP = 1.5 # start each stroke this far past the centre line, so the halves join
@@ -39,11 +39,11 @@ LEAN_BASE_DEG = 30.0 # ... increasing to this at the base, so the lowest strokes
 JITTER_DEG = 3.0     # small random variation per stroke (fixed seed)
 CURVE = 10.0         # strokes bend further back as they go out: extra droop (mm) at full half-width
 CURVE_JITTER = 0.3   # +/- fraction of random variation in that bend
-PRESS = 1.5          # start of stroke: tip this far below the paper (full brush weight)
+PRESS = 1.0          # start of stroke: tip this far below the paper (was 1.5)
 # Stroke profile = line 9 of calib_strokes.gcode (Roland's pick, 31 Oct): 1.5 mm pressed for
 # 12 mm, then a slow S-curve lift to 9 mm above the paper over 45 mm.
 # (Before: LIFT 16 over the last 75 % of each stroke; kept in tree_brush_lift16.py.)
-LIFT = 8.0           # max tip height above the paper (line 9 had 9 mm; Roland chose 8)
+LIFT = 7.0           # max tip height above the paper (line 9 had 9 mm; then 8; now 7)
 HOLD_MM = 12.0       # first part of the stroke at full pressure
 ATTACK_MM = 45.0     # length over which the brush lifts to LIFT
 # Strokes shorter than HOLD_MM + ATTACK_MM (near the tip) get the same profile shrunk to fit,
