@@ -43,7 +43,7 @@ PRESS = 1.5          # start of stroke: tip this far below the paper (full brush
 # Stroke profile = line 9 of calib_strokes.gcode (Roland's pick, 31 Oct): 1.5 mm pressed for
 # 12 mm, then a slow S-curve lift to 9 mm above the paper over 45 mm.
 # (Before: LIFT 16 over the last 75 % of each stroke; kept in tree_brush_lift16.py.)
-LIFT = 9.0           # max tip height above the paper
+LIFT = 8.0           # max tip height above the paper (line 9 had 9 mm; Roland chose 8)
 HOLD_MM = 12.0       # first part of the stroke at full pressure
 ATTACK_MM = 45.0     # length over which the brush lifts to LIFT
 # Strokes shorter than HOLD_MM + ATTACK_MM (near the tip) get the same profile shrunk to fit,
